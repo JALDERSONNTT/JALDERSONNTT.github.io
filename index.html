@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload your canvas</title>
+    <title>Upload your canvas - NTT DATA Business Solutions</title>
     <style>
         * {
             margin: 0;
@@ -13,12 +13,50 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #003087 0%, #00a3e0 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .header-text h2 {
+            color: #003087;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .header-text p {
+            color: #00a3e0;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0;
         }
 
         .container {
@@ -28,13 +66,15 @@
             max-width: 500px;
             width: 100%;
             padding: 40px;
+            margin-top: 100px;
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #003087;
             margin-bottom: 30px;
             font-size: 28px;
+            font-weight: 700;
         }
 
         .form-group {
@@ -65,7 +105,7 @@
         input[type="email"]:focus,
         textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #00a3e0;
         }
 
         .photo-input-group {
@@ -107,7 +147,7 @@
         .file-input-label {
             display: inline-block;
             padding: 10px 20px;
-            background: #667eea;
+            background: #003087;
             color: white;
             border-radius: 5px;
             cursor: pointer;
@@ -116,7 +156,7 @@
         }
 
         .file-input-label:hover {
-            background: #5568d3;
+            background: #00a3e0;
         }
 
         input[type="file"] {
@@ -133,7 +173,7 @@
         button {
             width: 100%;
             padding: 14px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #003087 0%, #00a3e0 100%);
             color: white;
             border: none;
             border-radius: 5px;
@@ -145,7 +185,7 @@
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 163, 224, 0.4);
         }
 
         button:active {
@@ -176,9 +216,32 @@
         .message.show {
             display: block;
         }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                margin-top: 150px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/NTT_DATA_logo.svg/1200px-NTT_DATA_logo.svg.png" alt="NTT DATA Business Solutions" class="logo">
+        <div class="header-text">
+            <h2>NTT DATA Business Solutions</h2>
+            <p>Upload your canvas</p>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Upload your canvas</h1>
         <form id="contactForm">
